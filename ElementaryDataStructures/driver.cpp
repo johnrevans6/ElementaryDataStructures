@@ -1,6 +1,7 @@
 #include <iostream>
 //#include "LinkedList.h"
-#include "Stack.h"
+//#include "Stack.h"
+//#include "Queue.h"
 using namespace std;
 
 int main()
@@ -34,5 +35,19 @@ int main()
 		stack.pop();
 	}*/	
 
+	//Test Queue
+	Queue queue;
+	for (int i = 0; i < 10; i++)
+	{
+		queue.push(i);
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << queue.front();
+		queue.pop();
+	}
+
+	cout<<queue.isempty();
 	return 0;
 }
