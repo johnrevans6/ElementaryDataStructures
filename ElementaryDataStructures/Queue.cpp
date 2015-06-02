@@ -42,14 +42,14 @@ void Queue::push(int num)
 
 nodeptr Queue::pop()
 {
-	nodeptr tmp = head;
-
 	if (!isempty())
-	{		
-		head = head->next;				
+	{
+		nodeptr tmp = head;
+		head = head->next;
+		return tmp;
 	}
 
-	return tmp;
+	return NULL;
 }
 
 int Queue::front()
