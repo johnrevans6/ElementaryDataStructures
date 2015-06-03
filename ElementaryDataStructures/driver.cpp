@@ -49,7 +49,6 @@ vector<int> merge(vector<int>left, vector<int>right)
 	return result;
 }
 
-
 vector<int> mergeSort(vector<int>list)
 {
 	
@@ -83,6 +82,32 @@ vector<int> mergeSort(vector<int>list)
 	return result;
 }
 
+
+int binarySearch(vector<int>list, int target)
+{
+	int left = 0;
+	int right = list.size();
+
+	while (left<right)
+	{
+		int mid = (left + right) / 2;
+
+		if (list[mid] < target)
+		{
+			left = mid+1;
+		}
+		else if (list[mid] > target)
+		{
+			right = mid-1;
+		}
+		else if (list[mid] == target)
+		{
+			return mid;
+		}
+	}
+
+	return -1;
+}
 
 
 int main()
@@ -163,7 +188,7 @@ int main()
 	cout<<hashTable.containsEntry("The Fallen by John Evans")<<endl<<endl;
 	cout << hashTable.containsEntry("Ender's Game by Orson Scott Card") << endl << endl;*/
 
-	vector<int>list = { 10, 1, 9, 2, 8, 3, 7, 4, 6, 5, 0, 10 };
+	/*vector<int>list = { 10, 1, 9, 2, 8, 3, 7, 4, 6, 5, 0, 10 };
 
 	list=mergeSort(list);
 
@@ -172,7 +197,12 @@ int main()
 		cout << list[i] << " ";
 	}
 
-	cout << endl << endl;
+	cout << endl << endl;*/
+
+	vector<int>list = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+	cout << binarySearch(list, 8) << endl << endl;
+	cout << binarySearch(list, 42) << endl << endl;
 	
 	return 0;
 }
