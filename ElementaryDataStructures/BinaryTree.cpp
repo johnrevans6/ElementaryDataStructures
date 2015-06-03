@@ -63,6 +63,17 @@ void BinaryTree::insert(nodeptr node, int num)
 	}
 }
 
+void BinaryTree::destroy(nodeptr node)
+{
+	if (node != NULL)
+	{
+		destroy(node->left);
+		destroy(node->right);
+
+		delete node;
+	}
+}
+
 void BinaryTree::preorderTraversal(nodeptr node)
 {
 	if (node == NULL)

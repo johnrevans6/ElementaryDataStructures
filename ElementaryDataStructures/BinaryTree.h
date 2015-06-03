@@ -19,6 +19,7 @@ public:
 
 	void insert(int num);
 	void insert(nodeptr node, int num);
+	void destroy(nodeptr node);
 	nodeptr search(int num);
 	nodeptr getRoot();
 	void preorderTraversal(nodeptr node);

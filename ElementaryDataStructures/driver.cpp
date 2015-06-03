@@ -2,7 +2,8 @@
 //#include "LinkedList.h"
 //#include "Stack.h"
 //#include "Queue.h"
-#include "BinaryTree.h"
+//#include "BinaryTree.h"
+#include "HashTable.h"
 using namespace std;
 
 int main()
@@ -51,7 +52,7 @@ int main()
 	cout<<queue.isempty();*/
 
 
-	BinaryTree tree;
+	/*BinaryTree tree;
 
 	tree.insert(2);
 	tree.insert(1);
@@ -72,7 +73,17 @@ int main()
 	tree.postorderTraversal(tree.getRoot());
 	cout << " }" << endl << endl;
 	
+	tree.destroy(tree.getRoot());*/
 
+	HashTable hashTable;
+
+	hashTable.addEntry("The Fallen by John Evans");
+	hashTable.addEntry("The Ascension by John Evans");
+	hashTable.addEntry("The Shining by Stephen King");
+	hashTable.addEntry("The Hitchhiker's Guide to the Galaxy by Douglas Adams");
+
+	cout<<hashTable.containsEntry("The Fallen by John Evans")<<endl<<endl;
+	cout << hashTable.containsEntry("Ender's Game by Orson Scott Card") << endl << endl;
 	
 	return 0;
 }
