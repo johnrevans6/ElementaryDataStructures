@@ -4,7 +4,8 @@
 //#include "Stack.h"
 //#include "Queue.h"
 //#include "BinaryTree.h"
-#include "HashTable.h"
+//#include "HashTable.h"
+#include "Graph.h"
 using namespace std;
 
 
@@ -199,10 +200,23 @@ int main()
 
 	cout << endl << endl;*/
 
-	vector<int>list = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	/*vector<int>list = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 	cout << binarySearch(list, 8) << endl << endl;
-	cout << binarySearch(list, 42) << endl << endl;
+	cout << binarySearch(list, 42) << endl << endl;*/
+
+	Graph g(4);
+
+	g.addEdge(0, 1);
+	g.addEdge(0, 2);
+	g.addEdge(1, 2);
+	g.addEdge(2, 0);
+	g.addEdge(2, 3);
+	g.addEdge(3, 3);
+
+	g.BFS(2);
+	cout << endl << endl;
+	g.DFS(2);
 	
 	return 0;
 }
